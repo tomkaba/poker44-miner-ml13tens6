@@ -18,6 +18,8 @@ SESSION_PREFIX="sn126b_m"
 AXON_BASE_PORT="12080"
 VENV_BIN="$REPO/.venv/bin"
 MODEL_ARTIFACT_REL="weights/gen13_tens6_177_hardened.ts"
+SUBTENSOR_NETWORK="${POKER44_SUBTENSOR_NETWORK:-finney}"
+SUBTENSOR_CHAIN_ENDPOINT="${POKER44_SUBTENSOR_CHAIN_ENDPOINT:-ws://178.18.251.11:9944}"
 
 if [[ ! -x "$VENV_BIN/python" ]]; then
   echo "ERROR: Python runtime not found at $VENV_BIN/python"
@@ -80,7 +82,8 @@ for raw_id in $(echo "$IDS_STRING" | tr ',' '\n'); do
       --netuid 126 \
       --wallet.name $WALLET_NAME \
       --wallet.hotkey hk$I \
-      --subtensor.network finney \
+      --subtensor.network $SUBTENSOR_NETWORK \
+      --subtensor.chain_endpoint $SUBTENSOR_CHAIN_ENDPOINT \
       --axon.port $PORT \
       --logging.debug
     echo '[miner-exit] Process ended, shell remains active'

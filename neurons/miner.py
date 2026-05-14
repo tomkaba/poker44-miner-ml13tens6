@@ -310,6 +310,6 @@ if __name__ == "__main__":
         bt.logging.info("Miner running...")
         while True:
             bt.logging.info(
-                f"Miner UID: {miner.uid} | Incentive: {float(miner.metagraph.I[miner.uid])} | Scorer: ml13tens5"
+                f"Miner UID: {miner.uid} | Incentive: {float(miner.metagraph.I[miner.uid])} | Scorer: ml13tens6"
             )
             time.sleep(60)
