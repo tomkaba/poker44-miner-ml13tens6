@@ -23,6 +23,6 @@
         "poker44/utils/model_manifest.py",
         "poker44/validator/synapse.py"
     ],
-    "implementation_sha256": "06e6895e1b15ec12d9052abab991f2f8d461eefea1ad8f445dc23a7a97f548e2",
+    "implementation_sha256": "c7908f72c7faa16e8f6deac394a52cc846975202c70263e3b67e6ee39b045ac9",
     "notes": "Gen13Tens6 neural network scorer (POT=177)."
 }
